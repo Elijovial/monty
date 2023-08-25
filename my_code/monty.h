@@ -5,6 +5,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+#define STACK 0
+#define QUEUE 1
+#define DELIMS " \n\t\a\b"
+
 extern char **op_toks;
 
 
@@ -38,7 +42,14 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+void set_op_tok_error(int error_code);
+int check_mode(stack_t *stack);
 
 void pall(stack_t **stack, unsigned int line_number);                                   void push(stack_t **stack, unsigned int line_number);
-int usage_error(void);                      int malloc_error(void);
+int usage_error(void);
+int malloc_error(void);
+int f_open_error(char *filename);
+int unknown_op_error(char *opcode, unsigned int line_number);
+int no_int_error(unsigned int line_number);
+
 #endif
