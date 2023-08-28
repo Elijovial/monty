@@ -1,4 +1,4 @@
-Project done by Elujah Omeruah and Hannah Sado
+Project done by Elijah Omeruah and Hannah Sado
 0x19. C - Stacks, Queues - LIFO, FIFO
 	Group Project
 Tasks
